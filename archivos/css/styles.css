@@ -1,64 +1,162 @@
-@import url(./variables.css);
-
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: var(--font-family-poppins);
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+    list-style: none;
     scroll-behavior: smooth;
 }
 
-body {
-    background-color: var(--body-bg);
+
+:root {
+    --text-color: #fff;
+    --bg-color: #1b1f24;
+    --second-bg-color: #22282f;
+    --main-color: #13bbff;;
+    --other-color: #c3cad5;
+
+    --h1-font: 3.5rem;
+    --h2-font: 2.9rem;
+    --p-font: 1rem;
 }
-/* ============= START HEADER ============= */
 
-/* navbar for large screens */
 
-/* navbar for small screens */
+body {
+    color: var(--text-color);
+    background: var(--bg-color);
+}
 
-/* ============= END HEADER ============= */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 16%;
+    background: transparent;
+    transition: all .50s ease;
+}
 
-/* ============= START HOME SECTION ============= */
+.logo {
+    font-size: 36px;
+    color: var(--text-color);
+    font-weight: 600;
+}
 
-/* ============= END HOME SECTION ============= */
+span {
+    color: var(--main-color);
+}
 
-/* ============= START ABOUT SECTION ============= */
+.nav-list {
+    display: flex;
+}
 
-/* ============= END ABOUT SECTION ============= */
+.nav-list a {
+    font-size: var(--p-font);
+    font-weight: 500;
+    color: var(--other-color);
+    margin-left: 40px;
+    transition: all .50s ease;
+}
 
-/* ============= START SKILLS SECTION ============= */
+.nav-list a:hover {
+    color: var(--main-color);
+    text-shadow: 3px 3px 20px var(--main-color), -2px 1px 30px var(--text-color);
+}
 
-/* Skills & Tools */
+#menu-icon {
+    font-size: 35px;
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+}
 
-/* Education & Experience */
 
-/* ============= END SKILLS SECTION ============= */
+/* ========================= Modo noche =================== */
+#modoOscuro-icono {
+    font-size: 2rem;
+    color: var(--text-color);
+    cursor: pointer;
+}
 
-/* ============= START PORTFOLIO SECTION ============= */
+.header.barra #modoOscuro-icono {
+    color: var(--main-color);
+    opacity: .9;
+}
 
-/* ============= END PORTFOLIO SECTION ============= */
+/* ========================= Sección de presentación =================== */
 
-/* ============= START SERVICES SECTION ============= */
+section {
+    min-height: 100vh;
+    padding: 110px 16% 90px;
+}
 
-/* ============= END SERVICES SECTION ============= */
+.inicio {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
 
-/* ============= START CTA SECTION ============= */
+.inicio .main-content {
+    max-width: 38rem;
+}
 
-/* ============= END CTA SECTION ============= */
+.main-content h3 {
+    font-size: 2.6rem;
+}
 
-/* ============= START TESTIMONIALS SECTION ============= */
+.main-content h1 {
+    font-size: var(--h1-font);
+    font-weight: 700;
+    margin: 15px 0px 20px;
+    line-height: .7;
+}
 
-/* ============= END TESTIMONIALS SECTION ============= */
+.main-content p {
+    font-size: var(--p-font);
+    font-weight: 400;
+    width: 620px;
+    max-width: 100%;
+    color: var(--other-color);
+    line-height: 23px;
+    margin-bottom: 30px;
+}
 
-/* ============= START CONTACT SECTION ============= */
+.image-personal img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 55%;
+    pointer-events: none;
+}
 
-/* ============= END CONTACT SECTION ============= */
+.social {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+}
 
-/* ============= START FOOTER ============= */
+.social i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: var(--main-color);
+    border-radius: 50%;
+    backdrop-filter: brightness(60%);
+    font-size: 25px;
+    margin-right: 20px;
+    box-shadow: 0 0 20px transparent;
+    cursor: pointer;
+    transition: all .50s ease;
+}
 
-/* ============= END FOOTER ============= */
-
-/* ============= SCROLL UP BUTTON ============= */
-
-/* ============= DARK MODE ============= */
+.social i:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px var(--main-color);
+}
