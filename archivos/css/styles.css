@@ -177,6 +177,7 @@ section {
     font-weight: 600;
     transition: all .50s ease;
     margin-right: 15px;
+    margin-top: 25px;
 }
 
 .btn:hover {
@@ -209,16 +210,18 @@ header.sticky {
 /* ========================= Sobre Mi =================== */
 .about {
     background: var(--second-bg-color);
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
+    padding: 120px;
 }
 
 .about-img img {
-    width: 100%;
+    width: 80%;
+}
+
+.about-tex {
+    width: 50%;
 }
 
 .about-tex h2 {
@@ -229,13 +232,14 @@ header.sticky {
 
 .datos {
     margin-bottom: 3px;
+    margin-top: 10px;
 }
 
 .datos p {
     color: var(--text-color);
     font-weight: 600;
     font-size: 19px;
-    line-height: 42px;
+    line-height: 50px;
 }
 
 .datos p span {
